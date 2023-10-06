@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="The_Text_App.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="mainlayout" Padding="20" Spacing="20">
+            <Label Text="The Text" FontAttributes="Bold" FontFamily="Young Serif" FontSize="30"/>
+            <Frame CornerRadius="20" Padding="0" >
+                <StackLayout Orientation="Horizontal" BackgroundColor="Green" x:Name="imgtotxt" Padding="10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="imgtotxtevent"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="image to text" Padding="20" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="20"/>
+                    <ImageButton Source="img2txt.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" BackgroundColor="Transparent"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="0" >
+                <StackLayout Orientation="Horizontal" BackgroundColor="Green" x:Name="speechtotext" Padding="10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="txtsummarytap"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="text summarizer" Padding="20" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="20"/>
+                    <ImageButton Source="leftarrow.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" BackgroundColor="Transparent"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="0" >
+                <StackLayout Orientation="Horizontal" BackgroundColor="Green" x:Name="txttospeech" Padding="10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="txttospeechevent"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="text to speech" Padding="20" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="20" />
+                    <ImageButton Source="ocricon.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" BackgroundColor="Transparent"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

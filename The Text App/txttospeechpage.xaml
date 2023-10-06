@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tools="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="The_Text_App.txttospeechpage"
+             Title="txttospeechpage">
+    <VerticalStackLayout x:Name="mainvlay">
+        <StackLayout Padding="20" Spacing="20" Orientation="Horizontal">
+            <Label Text="voice to your text" FontAttributes="Bold" FontFamily="Young Serif" FontSize="30" HorizontalOptions="StartAndExpand"/>
+            <Label Text="take from image to text" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            <Switch x:Name="switcho" IsToggled="False" Toggled="takefromocr" HorizontalOptions="End" />
+        </StackLayout>
+        <Editor x:Name="rawtxt" HorizontalOptions="CenterAndExpand" WidthRequest="500" HeightRequest="300"/>
+        <Button x:Name="go" Clicked="go_Clicked" HorizontalOptions="Center" Text="GO!" CornerRadius="20"/>
+        <tools:MediaElement x:Name="mediaElement"
+                      ShouldAutoPlay="True"
+                      ShouldShowPlaybackControls="True"
+                      HeightRequest="300"
+                      WidthRequest="400"
+                            IsVisible="false"/>
+    </VerticalStackLayout>
+</ContentPage>

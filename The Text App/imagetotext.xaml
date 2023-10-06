@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="The_Text_App.imagetotext"
+             Title="imagetotext">
+    <ScrollView>
+        <StackLayout x:Name="openclosed" Orientation="Horizontal"  >
+
+            <ImageButton Source="rightarrow.png" Clicked="ImageButton_Clicked" HeightRequest="60"  Padding="10" BackgroundColor="Transparent"
+                        ToolTipProperties.Text="open menu" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="Start"/>
+            <VerticalStackLayout BackgroundColor="#00b300" WidthRequest="80" x:Name="openclose" Spacing="10" Padding="10">
+                <ImageButton Source="leftarrow.png" VerticalOptions="Center" BackgroundColor="Transparent" WidthRequest="60" Clicked="ImageButton_Clicked" HeightRequest="60" ToolTipProperties.Text="close menu" Padding="10" />
+                <ImageButton x:Name="ocrbtn" Source="ocricon.png" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent" Clicked="onocrclikced"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand" x:Name="mainvlay">
+                <Label x:Name="itotlbl" Text="convert images to text" FontSize="18" FontAttributes="Bold" FontFamily="Showcard Gothic" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                <Border Stroke="#00b300" StrokeThickness="5" StrokeShape="RoundRectangle 10,10,10,10" Padding="10" WidthRequest="250" HeightRequest="120">
+                    <HorizontalStackLayout VerticalOptions="CenterAndExpand" Padding="40" Spacing="20" HorizontalOptions="CenterAndExpand">
+
+                        <ImageButton x:Name="camerabtn" Source="camera3.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" Clicked="onccamclicked" BackgroundColor="Transparent"/>
+                        <ImageButton x:Name="plusbtn" Source="plus.png" WidthRequest="50" HeightRequest="50" Clicked="onplusclicked" BackgroundColor="Transparent"/>
+
+                    </HorizontalStackLayout>
+                </Border>
+                <ScrollView HeightRequest="150" Orientation="Horizontal" BackgroundColor="#ccffcc" Margin="20" HorizontalOptions="Start" >
+                    <HorizontalStackLayout HeightRequest="150" Padding="10" Spacing="10" x:Name="imggalary" MinimumWidthRequest="700">
+
+                    </HorizontalStackLayout>
+                </ScrollView>
+                <Button x:Name="gobtn" Text="GO!" Clicked="gobtn_Clicked" CornerRadius="50" FontSize="20" FontFamily="Showcard Gothic" HorizontalOptions="Center" HeightRequest="100" WidthRequest="200" Padding="20" BackgroundColor="{AppThemeBinding Light=#ccffcc, Dark=#00b300}"/>
+                <ScrollView x:Name="editorview" WidthRequest="250" Orientation="Both" HeightRequest="500" IsVisible="false">
+                    <Editor x:Name="maineditor" BackgroundColor="#ccffcc" MinimumHeightRequest="1000" MinimumWidthRequest="700" />
+                </ScrollView>
+                <HorizontalStackLayout x:Name="saveview" HorizontalOptions="Center" IsVisible="false">
+                    <Button Text="Save" x:Name="Save" Clicked="Save_Clicked" CornerRadius="50" BackgroundColor="#00b300"/>
+                    <Button Text="Copy text" x:Name="copy" Clicked="copy_Clicked" CornerRadius="50" BackgroundColor="#00b300"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

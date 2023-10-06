@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="The_Text_App.textsummarizer"
+             Title="textsummarizer">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <StackLayout Padding="20" Spacing="20" Orientation="Horizontal">
+                <Label Text="summarize your text" FontAttributes="Bold" FontFamily="Young Serif" FontSize="30" HorizontalOptions="StartAndExpand"/>
+                <Label Text="take from image to text" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                <Switch x:Name="switcho" IsToggled="False" Toggled="takefromocr" HorizontalOptions="End" />
+            </StackLayout>
+            <Editor x:Name="rawtxt" HorizontalOptions="CenterAndExpand" WidthRequest="700" HeightRequest="300"/>
+            <Button x:Name="go" Clicked="go_Clicked" HorizontalOptions="Center" Text="GO!" CornerRadius="20"/>
+            <Editor x:Name="result" HorizontalOptions="CenterAndExpand" WidthRequest="700" HeightRequest="300"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
